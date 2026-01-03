@@ -1,0 +1,77 @@
+baseURL = 'https://yourdomain.com'
+languageCode = 'en-us'
+title = 'Your Blog Name'
+theme = 'PaperMod'
+
+# Enable emoji support
+enableEmoji = true
+
+# Pagination
+paginate = 10
+
+[params]
+  # Theme settings
+  env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+  description = "Your blog description"
+  author = "Your Name"
+  
+  # Home page settings
+  homeInfoParams.Title = "Hi there 👋"
+  homeInfoParams.Content = """
+  Welcome to my blog! I write about software engineering, infrastructure, and technology.
+  """
+
+  # Social media links
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/yourusername"
+
+  [[params.socialIcons]]
+  name = "linkedin"
+  url = "https://linkedin.com/in/yourusername"
+
+  # Search
+  ShowSearchPage = true
+
+  # Posts settings
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  TocOpen = false
+
+  # Clean URLs
+  disableSpecial1stPost = false
+  displayFullLangName = true
+
+[menu]
+  [[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+
+  [[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 20
+
+  [[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 30
+
+# Markup settings
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "github"
+```
