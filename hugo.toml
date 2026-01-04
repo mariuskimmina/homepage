@@ -124,6 +124,8 @@ pagerSize = 10
 
 # Markup settings
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
     noClasses = false
     codeFences = true
