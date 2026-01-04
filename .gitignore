@@ -1,0 +1,8 @@
+# Nix build artifacts
+result
+result-*
+
+# Hugo temporary folders (if you run 'hugo server' locally)
+resources/
+public/
+.hugo_build.lock

@@ -15,8 +15,8 @@
         papermod-theme = pkgs.fetchFromGitHub {
           owner = "adityatelange";
           repo = "hugo-PaperMod";
-          rev = "v7.0";
-          sha256 = "sha256-PLACEHOLDER"; # We'll update this
+          rev = "master";
+          sha256 = "sha256-+OyrkV+9TELJOoz1qL63Ad95jobRQfv6RpoHKhemDfM=";
         };
         
         # Hugo site build

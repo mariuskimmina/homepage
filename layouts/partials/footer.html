@@ -1,0 +1,55 @@
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-name">{{ .Site.Title }}</div>
+                <p>Software engineer, speaker, and educator dedicated to building accessible and performant web applications.</p>
+            </div>
+            
+            <div class="footer-nav">
+                <div class="footer-column">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/speaking/">Speaking</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Content</h3>
+                    <ul>
+                        <li><a href="/posts/">Blog</a></li>
+                        <li><a href="/categories/">Categories</a></li>
+                        <li><a href="/search/">Search</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                &copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.
+            </div>
+            <div class="social-icons">
+                <!-- BlueSky -->
+                <a href="https://bsky.app/" aria-label="BlueSky" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 512 512" width="24" height="24" fill="currentColor"><path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.1 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 120.6c-121.9 97.4-147.2-74.9-161.2-148.5C261.3 259.3 259.6 258 256 258s-5.3 1.3-8.4 18.6c-14 73.6-39.3 245.9-161.2 148.5c-56.6-45.1-30.4-103.1 72.5-120.6C100 314.6 33.9 298 15.7 233.1C10.5 214.4 1.6 99.4 1.6 83.9c0-77.8 68.2-53.4 110.2-21.7z"/></svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/yourusername" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/yourusername" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <!-- YouTube -->
+                <a href="https://youtube.com/@yourusername" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,6 @@
+{{- /* Custom CSS */ -}}
+{{- $extended := resources.Get "css/extended.css" -}}
+{{- if $extended -}}
+    {{- $extended = $extended | resources.Minify | resources.Fingerprint -}}
+    <link crossorigin="anonymous" href="{{ $extended.RelPermalink }}" integrity="{{ $extended.Data.Integrity }}" rel="preload stylesheet" as="style">
+{{- end -}}
