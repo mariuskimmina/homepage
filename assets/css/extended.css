@@ -30,8 +30,14 @@ body {
 .main {
     max-width: 100% !important;
     margin: 0 auto;
-    padding: 0;
+    padding: 0; /* Reset global padding */
     min-height: calc(100vh - 300px); /* Ensure footer stays down */
+}
+
+/* Add spacing specifically for the blog list page and category lists */
+.posts-list-container,
+.term-container {
+    padding-top: 6rem; /* Space under the header */
 }
 
 /* Specific content constraints for articles */
@@ -40,7 +46,12 @@ body {
 .list .post-entry, 
 .term-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list .post-entry {
+    margin-bottom: 2rem; /* Spacing between posts in lists */
 }
 
 h1, h2, h3, h4, h5, h6 {

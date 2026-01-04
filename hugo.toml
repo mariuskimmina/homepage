@@ -11,6 +11,8 @@ enableEmoji = true
 pagerSize = 10
 
 [params]
+  [cover]
+    hidden = true
   # Theme settings
   env = "production"
   description = "Software engineer, speaker, and educator."
@@ -27,7 +29,7 @@ pagerSize = 10
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
   ShowWordCount = true
   ShowToc = true

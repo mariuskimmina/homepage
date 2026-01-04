@@ -1,5 +1,5 @@
 ---
-title: "Marius Toolbox - issue #1"
+title: "Marius Toolbox - toolbox #1"
 date: 2025-12-28T11:51:32Z
 description: "An Introduction"
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Making sense of NixOS with nixos-anywhere - issue #2"
+title: "Making sense of NixOS with nixos-anywhere - toolbox #2"
 date: 2026-01-02T17:22:48Z
 description: "Using nix as an IaC tool"
 draft: false
