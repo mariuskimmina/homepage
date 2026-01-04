@@ -1,4 +1,4 @@
-baseURL = 'https://yourdomain.com'
+baseURL = 'https://mariuskimmina.com'
 languageCode = 'en-us'
 title = 'Marius Kimmina'
 theme = 'PaperMod'
@@ -13,8 +13,12 @@ pagerSize = 10
 [params]
   # Theme settings
   env = "production"
-  description = "Your blog description"
+  description = "Software engineer, speaker, and educator."
   author = "Marius Kimmina"
+  github = "mariuskimmina"
+  linkedin = "marius-kimmina"
+  bluesky = "mariuskimmina.com"
+  youtube = "@mariuskimmina"
 
   # Search
   ShowSearchPage = true
@@ -72,7 +76,7 @@ pagerSize = 10
   [[menu.main]]
   identifier = "videos"
   name = "Videos"
-  url = "https://youtube.com/@yourusername"
+  url = "https://www.youtube.com/@mariuskimmina"
   weight = 42
   parent = "content"
   [menu.main.params]
@@ -87,7 +91,6 @@ pagerSize = 10
   [menu.main.params]
     icon = "notes"
 
-  # Socials Dropdown
   [[menu.main]]
   identifier = "socials"
   name = "Socials"
@@ -98,17 +101,26 @@ pagerSize = 10
   [[menu.main]]
   identifier = "bluesky"
   name = "BlueSky"
-  url = "https://bsky.app/"
+  url = "https://bsky.app/profile/mariuskimmina.com"
   weight = 51
   parent = "socials"
   [menu.main.params]
     icon = "bluesky"
 
   [[menu.main]]
+  identifier = "tangled"
+  name = "Tangled"
+  url = "https://tangled.org/mariuskimmina.com"
+  weight = 52
+  parent = "socials"
+  [menu.main.params]
+    icon = "tangled"
+
+  [[menu.main]]
   identifier = "github"
   name = "GitHub"
-  url = "https://github.com/yourusername"
-  weight = 52
+  url = "https://github.com/mariuskimmina"
+  weight = 53
   parent = "socials"
   [menu.main.params]
     icon = "github"
@@ -116,8 +128,8 @@ pagerSize = 10
   [[menu.main]]
   identifier = "linkedin"
   name = "LinkedIn"
-  url = "https://linkedin.com/in/yourusername"
-  weight = 53
+  url = "https://www.linkedin.com/in/marius-kimmina/"
+  weight = 54
   parent = "socials"
   [menu.main.params]
     icon = "linkedin"

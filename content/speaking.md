@@ -15,7 +15,7 @@ disableShare: true
 I love sharing my experiences with the community. Here are some of the topics I speak about and where I've been recently.
 
 ![Marius speaking at a conference](/images/speaking.png)
-*Photo of Marius at a conference*
+*Photo of me at SREday London - my first ever conference talk*
 
 ## Upcoming Events
 
