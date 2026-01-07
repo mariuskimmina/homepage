@@ -1,0 +1,26 @@
+source:
+  handle: "mariuskimmina.com"
+  collection: "pub.leaflet.document"
+  publication_name: "Marius Toolbox"
+
+output:
+  posts_dir: "content/posts/leaflet"
+  images_dir: "static/images/leaflet"
+  image_path_prefix: "/images/leaflet"
+
+template:
+  frontmatter: |
+    ---
+    title: "{{ .Title }}"
+    date: {{ .CreatedAt }}
+    original_url: "https://toolbox.leaflet.pub/{{ .Slug }}"
+    author: "{{ .Handle }}"
+    ---
+  content: |
+    *Originally published at [Marius Toolbox](https://toolbox.leaflet.pub/{{ .Slug }})*
+
+    {{ .Content }}
+
+    ---
+    *Originally published at [Marius Toolbox](https://toolbox.leaflet.pub/{{ .Slug }})*
+
