@@ -38,15 +38,11 @@
           installPhase = "true"; # output already in $out
         };
 
-        sync-leaflet = pkgs.writeShellScriptBin "sync-leaflet" ''
-          ${pkgs.python3}/bin/python3 ${./scripts/sync_leaflet.py}
-        '';
         
       in {
         packages = {
           default = site;
           blog = site;
-          sync-leaflet = sync-leaflet;
         };
 
         devShells.default = pkgs.mkShell {
@@ -54,7 +50,6 @@
             hugo
             git
             python3
-            sync-leaflet
           ];
           
           shellHook = ''
