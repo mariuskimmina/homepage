@@ -15,7 +15,7 @@ pagerSize = 10
     hidden = true
   # Theme settings
   env = "production"
-  description = "Software engineer, speaker, and educator."
+  description = "Software engineer, Infrastructure & Automation"
   author = "Marius Kimmina"
   github = "mariuskimmina"
   linkedin = "marius-kimmina"

@@ -25,7 +25,6 @@ back in those days - like you are telling me I could get paid to hack people?
 I realized I had to learn a lot and decided to start a computer science degree. Security remained my main interest for a while longer, I played CTFs all night, hacking intentionally 
 vulnerable systems and went to the [Chaos Communication Congress](https://events.ccc.de/en/congress/) for the first time in 2019. I also grew more interested in another area of Software 
 Development around this time, deployments, servers, infrastructure and CI/CD. I became really fascinated by all the things it takes to run large scale production systems
-and how to get code from the developers computer into the world.
-
+and how to get code from the developers computer into the world - which is what I am still working on today.
 
 
