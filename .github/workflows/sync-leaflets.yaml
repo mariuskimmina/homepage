@@ -33,4 +33,4 @@ jobs:
         if: success()
         env:
           GH_TOKEN: ${{ secrets.NIX_LAB_PAT }}
-        run: gh workflow run deploy.yml --repo mariuskimmina/nix-hetzner-lab
+        run: gh workflow run deploy.yaml --repo mariuskimmina/nix-hetzner-lab
