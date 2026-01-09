@@ -6,6 +6,8 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -18,7 +20,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@mariuskimmina.com"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add content/ static/
           if git diff --staged --quiet; then
             echo "No changes to commit"
