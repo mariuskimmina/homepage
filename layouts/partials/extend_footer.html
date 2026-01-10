@@ -1,6 +1,24 @@
 <script>
-    // Toggle mobile menu
+    // Theme toggle
     document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', currentTheme);
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                const theme = htmlElement.getAttribute('data-theme');
+                const newTheme = theme === 'dark' ? 'light' : 'dark';
+
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        }
+
+        // Toggle mobile menu
         const menuToggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu');
 
