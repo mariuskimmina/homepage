@@ -9,8 +9,24 @@
     --accent-color: #00a4ab; /* Darker Turquoise */
     --header-background: #ffffff;
     --footer-background: #f9fafb;
+    --card-background: #ffffff;
+    --card-border: #f3f4f6;
+    --card-shadow: rgba(0, 0, 0, 0.05);
 
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+    --primary-color: #f9fafb; /* Light text */
+    --secondary-color: #d1d5db; /* Light gray */
+    --background-color: #111827; /* Dark background */
+    --accent-color: #00d4dd; /* Brighter Turquoise */
+    --header-background: #1f2937;
+    --footer-background: #1f2937;
+    --card-background: #1f2937;
+    --card-border: #374151;
+    --card-shadow: rgba(0, 0, 0, 0.3);
 }
 
 /* Apply base styles */
@@ -143,6 +159,80 @@ a:hover {
 .nav-cta {
     position: absolute;
     right: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+#theme-toggle:hover {
+    background-color: var(--primary-color);
+    transform: rotate(20deg);
+}
+
+#theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
+    stroke: currentColor;
+    transition: color 0.3s;
+}
+
+#theme-toggle:hover svg {
+    color: white;
+    stroke: currentColor;
+}
+
+/* Show/hide sun and moon based on theme */
+[data-theme="light"] #sun {
+    display: none;
+}
+
+[data-theme="dark"] #moon {
+    display: none;
+}
+
+body:not([data-theme]) #sun {
+    display: none;
+}
+
+/* Dark mode theme toggle styles */
+[data-theme="dark"] #theme-toggle {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+[data-theme="dark"] #theme-toggle svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+    stroke-width: 2 !important;
+    fill: none !important;
+}
+
+[data-theme="dark"] #theme-toggle:hover {
+    background-color: #00bfcc;
+    border-color: #00bfcc;
+}
+
+[data-theme="dark"] #theme-toggle:hover svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+    stroke-width: 2 !important;
+    fill: none !important;
 }
 
 /* Dropdown Styles */
@@ -152,10 +242,10 @@ a:hover {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: white;
-    border: 1px solid #f3f4f6;
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
     border-radius: 8px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px var(--card-shadow);
     padding: 0.5rem 0;
     min-width: 200px;
     z-index: 1000;
@@ -244,6 +334,11 @@ a:hover {
     color: var(--accent-color);
 }
 
+/* Dark mode dropdown styles */
+[data-theme="dark"] .dropdown-menu a:hover {
+    background-color: #374151;
+}
+
 /* CTA Button & General Primary Button */
 .nav-cta .button,
 .button.primary {
@@ -265,6 +360,19 @@ a:hover {
 .button.primary:hover {
     background-color: var(--accent-color);
     transform: translateY(-1px);
+}
+
+/* Dark mode button styles */
+[data-theme="dark"] .nav-cta .button,
+[data-theme="dark"] .button.primary {
+    background-color: var(--accent-color);
+    color: var(--background-color) !important;
+}
+
+[data-theme="dark"] .nav-cta .button:hover,
+[data-theme="dark"] .button.primary:hover {
+    background-color: #00bfcc;
+    color: var(--background-color) !important;
 }
 
 /* Mobile Toggle */
@@ -453,8 +561,8 @@ a:hover {
 }
 
 .post-entry {
-    background: #fff;
-    border: 1px solid #f3f4f6;
+    background: var(--card-background);
+    border: 1px solid var(--card-border);
     padding: 3rem;
     border-radius: 32px;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
@@ -462,7 +570,7 @@ a:hover {
 
 .post-entry:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 25px 30px -5px var(--card-shadow);
     border-color: var(--accent-color);
 }
 
@@ -710,7 +818,7 @@ a:hover {
     }
 
     .logo a {
-        font-size: 2.25rem !important;
+        font-size: 1.75rem !important;
         line-height: 1 !important;
     }
 
@@ -726,16 +834,52 @@ a:hover {
         z-index: 1002;
     }
 
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 0;
+        z-index: 1002;
+        padding: 0.3rem;
+    }
+
+    .menu-toggle span {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    #theme-toggle {
+        position: static;
+        width: 36px;
+        height: 36px;
+        border-width: 1.5px;
+    }
+
+    #theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nav-cta {
+        display: flex !important;
+        position: absolute;
+        right: 55px; /* Make room for hamburger */
+        gap: 1rem;
+    }
+
+    .nav-cta .button {
+        display: none; /* Hide contact button on mobile */
+    }
+
     .menu {
         display: none !important;
         position: fixed;
-        top: calc(4rem + 2.25rem + 1px); /* Header top padding + logo height + bottom padding + border */
+        top: calc(4rem + 1.75rem); /* Header padding + smaller logo height */
         left: 0;
         right: 0;
         bottom: 0;
         width: 100vw;
-        height: calc(100vh - 4rem - 2.25rem - 1px); /* Full height minus header */
-        background: #ffffff !important;
+        height: calc(100vh - 4rem - 1.75rem); /* Full height minus header */
+        background-color: var(--background-color) !important;
         opacity: 1 !important;
         flex-direction: column;
         justify-content: flex-start;
@@ -749,11 +893,6 @@ a:hover {
         margin: 0 !important;
         overflow-y: auto;
         gap: 0;
-    }
-
-    /* Dark mode support */
-    [data-theme="dark"] .menu {
-        background: #1a1a1a !important;
     }
 
     .menu.active {
